@@ -1,7 +1,7 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/whatsapp", methods=["POST"])
 def whatsapp_reply():
@@ -18,5 +18,5 @@ def whatsapp_reply():
 
     return str(resp)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
